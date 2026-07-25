@@ -5,11 +5,35 @@ export const members: Member[] = [
   {
     name: piProfile.name,
     chineseName: piProfile.chineseName,
-    role: piProfile.title,
+    role: "Assistant Professor, Fudan University",
     group: "Principal Investigator",
     bio: "",
     email: piProfile.email,
-    image: piProfile.image
+    image: piProfile.image,
+    links: piProfile.links.filter((link) => link.label === "Google Scholar"),
+    careerSummary: [
+      {
+        period: "2026 - Present",
+        title: "Assistant Professor",
+        institution: "Fudan University"
+      },
+      {
+        period: "2023 - 2026",
+        title: "Postdoctoral Scholar",
+        institution: "University of California, San Diego"
+      },
+      {
+        period: "2019 - 2023",
+        title: "PhD in Chemistry",
+        institution: "The University of British Columbia"
+      },
+      {
+        period: "2014 - 2018",
+        title: "BSc in Chemistry",
+        institution: "Zhejiang University"
+      }
+    ],
+    profileHref: "/shipei-xing"
   },
   // {
   //   name: "FIRST LAST",

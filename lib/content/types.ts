@@ -37,6 +37,8 @@ export type Member = {
   email?: string;
   image?: string;
   links?: ProfileLink[];
+  careerSummary?: ProfileEntry[];
+  profileHref?: string;
   isOpenPosition?: boolean;
 };
 

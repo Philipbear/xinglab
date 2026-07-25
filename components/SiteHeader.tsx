@@ -30,6 +30,7 @@ export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDesktopMenu, setOpenDesktopMenu] = useState<string | null>(null);
   const desktopMenuCloseTimer = useRef<number | null>(null);
+  const isDesktopMenuPointerDown = useRef(false);
 
   function closeMobileMenuAfterClick() {
     window.setTimeout(() => setIsOpen(false), 0);
@@ -60,12 +61,29 @@ export function SiteHeader() {
     }, 180);
   }
 
+  function closeDesktopMenuAfterClick() {
+    window.setTimeout(closeDesktopMenu, 0);
+  }
+
   useEffect(() => {
     setIsOpen(false);
     closeDesktopMenu();
   }, [pathname]);
 
-  useEffect(() => clearDesktopMenuCloseTimer, []);
+  useEffect(() => {
+    function releaseDesktopMenuPointer() {
+      isDesktopMenuPointerDown.current = false;
+    }
+
+    window.addEventListener("pointerup", releaseDesktopMenuPointer, true);
+    window.addEventListener("pointercancel", releaseDesktopMenuPointer, true);
+
+    return () => {
+      clearDesktopMenuCloseTimer();
+      window.removeEventListener("pointerup", releaseDesktopMenuPointer, true);
+      window.removeEventListener("pointercancel", releaseDesktopMenuPointer, true);
+    };
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-line/80 bg-paper/94 backdrop-blur">
@@ -104,9 +122,17 @@ export function SiteHeader() {
                 className="relative"
                 onMouseEnter={() => childLinks.length > 0 && showDesktopMenu(menuKey)}
                 onMouseLeave={closeDesktopMenuAfterPointerExit}
+                onPointerDownCapture={() => {
+                  isDesktopMenuPointerDown.current = true;
+                  clearDesktopMenuCloseTimer();
+                }}
                 onFocus={() => childLinks.length > 0 && showDesktopMenu(menuKey)}
                 onBlur={(event) => {
                   const nextFocusedElement = event.relatedTarget;
+
+                  if (isDesktopMenuPointerDown.current) {
+                    return;
+                  }
 
                   if (!(nextFocusedElement instanceof Node) || !event.currentTarget.contains(nextFocusedElement)) {
                     closeDesktopMenu();
@@ -160,10 +186,7 @@ export function SiteHeader() {
                               childActive ? "bg-paper text-fudan" : "text-muted hover:bg-paper hover:text-ink"
                             }`}
                             aria-current={childActive ? "page" : undefined}
-                            onClick={(event) => {
-                              closeDesktopMenu();
-                              event.currentTarget.blur();
-                            }}
+                            onClick={closeDesktopMenuAfterClick}
                           >
                             {child.label}
                           </Link>

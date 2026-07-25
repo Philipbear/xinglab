@@ -1,6 +1,7 @@
-import { ExternalLink, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { PageIntro } from "@/components/PageIntro";
 import { PersonAvatar } from "@/components/PersonAvatar";
+import { ProfileLinkIcon } from "@/components/ProfileLinkIcon";
 import { piProfile } from "@/lib/content";
 import type { ProfileEntry } from "@/lib/content";
 import type { ProfileHonor } from "@/lib/content/types";
@@ -135,7 +136,7 @@ export default function ShipeiXingPage() {
                     href={link.href}
                     className="inline-flex items-center gap-2 font-semibold text-fudan transition hover:text-ink"
                   >
-                    <ExternalLink aria-hidden="true" size={16} />
+                    <ProfileLinkIcon label={link.label} />
                     {link.label}
                   </a>
                 ))}
