@@ -13,22 +13,22 @@ export const members: Member[] = [
     links: piProfile.links.filter((link) => link.label === "Google Scholar"),
     careerSummary: [
       {
-        period: "2026 - Present",
+        period: "2026.8 - Present",
         title: "Assistant Professor",
         institution: "Fudan University"
       },
       {
-        period: "2023 - 2026",
+        period: "2023.8 - 2026.7",
         title: "Postdoctoral Scholar",
         institution: "University of California, San Diego"
       },
       {
-        period: "2019 - 2023",
+        period: "2019.1 - 2023.4",
         title: "PhD in Chemistry",
         institution: "The University of British Columbia"
       },
       {
-        period: "2014 - 2018",
+        period: "2014.9 - 2018.6",
         title: "BSc in Chemistry",
         institution: "Zhejiang University"
       }
