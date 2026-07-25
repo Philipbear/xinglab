@@ -88,19 +88,27 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-line/80 bg-paper/94 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="Xing Lab home">
-          <Image
-            src={withBasePath("/images/branding/xing-lab-mark.svg")}
-            alt="Xing Lab mark"
-            width={72}
-            height={62}
-            priority
-            className="h-12 w-14 shrink-0 object-contain sm:h-14 sm:w-16"
-          />
-          <span className="flex min-w-0 flex-col">
-            <span className="text-lg font-semibold tracking-normal text-ink">Xing Lab</span>
-            <span className="text-xs font-medium uppercase tracking-normal text-muted">Fudan University</span>
+        <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3" aria-label="Xing Lab home">
+          <span className="flex shrink-0 items-center gap-1 sm:gap-1.5">
+            <Image
+              src={withBasePath("/images/branding/xing-lab-mark.svg")}
+              alt="Xing Lab mark"
+              width={72}
+              height={62}
+              priority
+              className="h-12 w-14 shrink-0 object-contain sm:h-14 sm:w-16"
+            />
+            <span className="text-base font-semibold tracking-normal text-ink sm:text-lg">Xing Lab</span>
           </span>
+          <span aria-hidden="true" className="h-8 w-px shrink-0 bg-line" />
+          <Image
+            src={withBasePath("/images/branding/FDU_logo.png")}
+            alt="Fudan University"
+            width={478}
+            height={209}
+            priority
+            className="h-auto w-16 shrink-0 sm:w-20 xl:w-24"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">

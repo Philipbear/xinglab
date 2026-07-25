@@ -55,7 +55,7 @@ export default function HomePage() {
           }}
         >
           <div className="max-w-3xl">
-            <h1 className="-mt-6 space-y-3 text-3xl font-semibold tracking-normal text-ink sm:text-4xl lg:text-5xl">
+            <h1 className="space-y-3 text-3xl font-semibold tracking-normal text-ink sm:text-4xl lg:text-5xl">
               <span className="block whitespace-nowrap">Metabolomics &</span>
               <span className="block whitespace-nowrap">Xenobiotic Metabolism</span>
               <span lang="zh-Hans" className="font-cjk block text-3xl font-normal text-muted sm:text-3xl lg:text-3xl">

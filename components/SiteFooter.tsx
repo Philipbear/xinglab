@@ -6,11 +6,20 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-line bg-white/90">
       <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-4 text-xs leading-5 text-muted sm:px-8 md:flex-row md:items-center md:justify-between">
-        <p>
-          <span className="font-semibold text-ink">Xing Lab</span>
-          <span className="mx-2 text-line">|</span>
-          <span>© {new Date().getFullYear()}</span>
-        </p>
+        <div className="flex items-center gap-2">
+          <Image
+            src={withBasePath("/images/branding/xing-lab-mark.svg")}
+            alt="Xing Lab mark"
+            width={72}
+            height={62}
+            className="h-8 w-9 shrink-0 object-contain"
+          />
+          <p>
+            <span className="font-semibold text-ink">Xing Lab</span>
+            <span className="mx-2 text-line">|</span>
+            <span>© {new Date().getFullYear()}</span>
+          </p>
+        </div>
         <div className="flex items-center gap-3 md:justify-end">
           <Image
             src={withBasePath("/images/branding/fudan-footer.png")}
