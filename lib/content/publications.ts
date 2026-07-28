@@ -1,6 +1,17 @@
 import type { Publication } from "./types";
 
 export const publications: Publication[] = [
+    {
+    title: "Bridging complexity and accessibility in metabolomics with MetaboApps",
+    authors:
+      "Helena Mannochio-Russo, Wilhan D Gonçalves Nunes, Haoqi Nina Zhao, Kine Eide Kvitne, Shipei Xing, Harsha Gouda, Julius Agongo, Ipsita Mohanty, Vincent Charron-Lamoureux, Prajit Rajkumar, Abzer K Pakkir Shah, Axel Walter, Rithi Krishnaraj, Yasin El Abiead, Patrick C Ferreira, Simone Zuffa, Abubaker Patan, Andrés Mauricio Caraballo-Rodríguez, Wout Bittremieux, Daniel Petras, Mingxun Wang, Pieter C. Dorrestein",
+    venue: "Nature Methods",
+    year: 2026,
+    url: "https://www.nature.com/articles/s41592-026-03186-8",
+    correspondingAuthors: ["Mingxun Wang", "Pieter C. Dorrestein"],
+    preprint: false,
+    highlighted: false
+  },
   {
     title: "Alkamines reveal a hidden layer of steroid and drug metabolism",
     authors:
@@ -189,17 +200,6 @@ export const publications: Publication[] = [
     venue: "Research Square",
     year: 2025,
     url: "https://www.researchsquare.com/article/rs-7652253/v1",
-    correspondingAuthors: ["Pieter C. Dorrestein"],
-    preprint: true,
-    highlighted: false
-  },
-  {
-    title: "Bridging Complexity and Accessibility in Metabolomics with MetaboApps",
-    authors:
-      "Helena Mannochio-Russo, Wilhan D. Gonçalves Nunes, Haoqi Nina Zhao, Kine Eide Kvitne, Shipei Xing, Harsha Gouda, Julius Agongo, Ipsita Mohanty, Vincent Charron-Lamoureux, Prajit Rajkumar, Abzer K. Pakkir Shah, Axel Walter, Rithi Krishnaraj, Yasin El Abiead, Patrick C. Ferreira, Simone Zuffa, Abubaker Patan, Andrés Mauricio Caraballo-Rodríguez, Wout Bittremieux, Daniel Petras, Mingxun Wang, Pieter C. Dorrestein",
-    venue: "chemRxiv, just accepted at Nature Methods",
-    year: 2025,
-    url: "https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-3nq29",
     correspondingAuthors: ["Pieter C. Dorrestein"],
     preprint: true,
     highlighted: false
