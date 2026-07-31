@@ -71,7 +71,7 @@ export const publications: Publication[] = [
     title: "A searchable metadata network graph for microbiome metabolomics",
     authors:
       "Vincent Charron-Lamoureux, Shipei Xing, Abubaker Patan, Corinn Walker, Ricardo-Almada Monter, Yasin El Abiead, Haoqi Nina Zhao, Lucas Patel, Yuhan Weng, Antonio Gonzalez, Gail Ackermann, Victoria Deleray, Vishant Gandhi, Ipsita Mohanty, Andres Mauricio Caraballo-Rodriguez, Kine Eide Kvitne, Simone Zuffa, Annabelle Norman, Anthony Martin, Loryn Chin, Rocio Paz-Gonzalez, Marta Sala-Climent, Nadia Suryawinata, Jasmine Zemlin, Harsha Gouda, Zhewen Hu, Grant Norton, Prajit Rajkumar, Anthony J. A. Molina, Jaclyn Bergstrom, Monae Pinner, Sadie Giddings, Allegra T. Aron, Liang Liang, Samira Dahesh, Santosh Lamichhane, Erin R. Reilly, Victor Nizet, Anna Skrip, April L. Lukowski, Selene F. H. Shore, Subhomitra Ghoshal, Melinda A. Engevik, Thomas D. Horvath, Simone Renwick, Julius Agongo, Maria L. Marco, Sarkis K. Mazmanian, Mingxun Wang, Heejung Yang, Daniel McDonald, Monica Guma, Evi Stegmann, Naybel Hernandez Perez, Paolo Stincone, Eric Kemen, Abzer Kelminal Pakkir Shah, Lars Bode, Daniel Petras, Dionicio Siegel, Manuela Raffatellu, Andrew D. Patterson, Suzanne Devkota, Adrian Jinich, Rob Knight, Karsten Zengler, Pieter C. Dorrestein",
-    venue: "bioRxiv, in review at Nature",
+    venue: "bioRxiv",
     year: 2026,
     url: "https://www.biorxiv.org/content/10.64898/2026.02.04.703849v1",
     correspondingAuthors: ["Pieter C. Dorrestein"],
@@ -82,7 +82,7 @@ export const publications: Publication[] = [
     title: "Charting the undiscovered metabolome with synthetic multiplexing implicates ibuprofen-carnitine in myotoxicity",
     authors:
       "Abubaker Patan, Shipei Xing, Vincent Charron-Lamoureux, Zhewen Hu, Victoria Deleray, Julius Agongo, Jasmine Zemlin, Harsha Gouda, Prajit Rajkumar, Yasin El Abiead, Aubreyana E. McMaugh, Hannah Heath, Helena Mannochio-Russo, Ipsita Mohanty, Laila Abolfathi, Ricardo Almada-Monter, Jia Yang, Carlynda Lee, Daniel Leanos, Noah Weimann, Wataru Tsuda, Sadie Giddings, Tammy Bui, Eric Ding, Kine Eide Kvitne, Haoqi Nina Zhao, Simone Zuffa, Paulo Wender Portal Gomes, Vivian Nguyen, Aileen Andrade, Maria A Pawlowski, Ashley C Ferland, Elisabeth Orozco, Wilhan Donizete Gonçalves Nunes, Andrés M. Caraballo-Rodríguez, Lurian Caetano David, Kathleen M. Giacomini, Adrian Jinich, Jeremy Carver, Nuno Bandeira, Mingxun Wang, Lindsey A. Burnett, Dionicio Siegel, Pieter C. Dorrestein",
-    venue: "bioRxiv, in review at Nature",
+    venue: "bioRxiv",
     year: 2026,
     url: "https://doi.org/10.1101/2025.11.18.689170",
     coFirstAuthors: ["Abubaker Patan", "Shipei Xing", "Vincent Charron-Lamoureux"],
