@@ -6,7 +6,7 @@ export const contactInfo: ContactInfo = {
   address: "Shanghai, China",
   email: piProfile.email,
   joinText:
-    `Please directly email me at ${piProfile.email} with a brief introduction, the opportunity you are interested in, and how your interests connect to our work. Use the email subject format "Xing Lab application - [Opportunity] - [Your Name]"; for example, "Xing Lab application - PhD student - Daxing Pai 派大星". Attach supporting files as needed; PDFs are preferred.`,
+    `Please directly email me at ${piProfile.email} with a brief introduction, the opportunity you are interested in, and how your interests connect to our work. Use the email subject format "XingLab Application - [Opportunity] - [Your Name]"; for example, "XingLab Application - PhD student - Daxing Pai 派大星". Attach supporting files as needed; PDFs are preferred.`,
   applicationSections: [
     {
       title: "Postdoctoral Researchers",
@@ -60,7 +60,7 @@ export const contactInfoZh: ContactInfo = {
   address: "中国上海",
   email: piProfile.email,
   joinText:
-    `请直接发送邮件至 ${piProfile.email}，在邮件中简要介绍你自己、你感兴趣的机会，以及你的研究兴趣如何与实验室方向相关。邮件主题请使用格式 “Xing Lab application - [Opportunity] - [Your Name]”；例如 “Xing Lab application - PhD student - Daxing Pai 派大星”。如有相关支持材料，请作为附件发送；优先使用 PDF 格式。`,
+    `请直接发送邮件至 ${piProfile.email}，在邮件中简要介绍你自己、你感兴趣的机会，以及你的研究兴趣如何与实验室方向相关。邮件主题请使用格式 “XingLab Application - [Opportunity] - [Your Name]”；例如 “XingLab Application - PhD student - Daxing Pai 派大星”。如有相关支持材料，请作为附件发送；优先使用 PDF 格式。`,
   applicationSections: [
     {
       title: "博士后研究人员",
