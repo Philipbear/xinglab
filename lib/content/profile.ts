@@ -4,7 +4,7 @@ export const piProfile = {
   name: "Shipei Xing",
   chineseName: "邢世沛",
   title: "Assistant Professor - Department of Environmental Science & Engineering, Fudan University",
-  email: "philipxsp@hotmail.com",
+  email: "sxing@fudan.edu.cn",
   image: "/images/profiles/shipei-xing-profile.png",
   bio: "I am currently an Assistant Professor at Fudan University, and a recipient of the Excellent Young Scientists Fund (Overseas) – 国家优秀青年科学基金（海外）. As first or corresponding author, I have published in journals including Nature Methods, Analytical Chemistry, and others, with one manuscript in revision at Nature and another in revision at Nature Communications. My research interest is in developing mass spectrometry and computational methods to map the small-molecule landscape of the human body and to understand how food, microbes, and the environment shape it.",
   links: [
