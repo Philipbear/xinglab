@@ -305,7 +305,7 @@ export const guideContent: GuideContent = {
         {
           id: "resource-manuscript-template",
           title: "Manuscript Template",
-          href: "/resources/manuscript_template.docx",
+          href: "/resources/manuscript_template_SX.docx",
           actionLabel: "Download Word template",
           bullets: [
             "Manuscript format may vary by journal; check the author guidelines when preparing the final version."
@@ -910,7 +910,7 @@ const manuscriptsSectionZh: GuideSection = {
     {
       id: "resource-manuscript-template",
       title: "论文模板",
-      href: "/resources/manuscript_template.docx",
+      href: "/resources/manuscript_template_SX.docx",
       actionLabel: "下载 Word 模板",
       bullets: [
         "不同期刊格式要求不同；准备最终版本时请查看作者指南。"
