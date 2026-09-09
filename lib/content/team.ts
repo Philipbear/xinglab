@@ -35,46 +35,24 @@ export const members: Member[] = [
     ],
     profileHref: "/shipei-xing"
   },
-  // {
-  //   name: "FIRST LAST",
-  //   chineseName: "姓名",
-  //   role: "Postdoctoral Researcher",
-  //   group: "Postdocs",
-  //   bio: "Profile details will be added after confirmation.",
-  //   email: "first.last.postdoc1@example.com",
-  //   links: [
-  //     { label: "GitHub", href: "https://example.com/github/first-last-postdoc1" },
-  //     { label: "ORCID", href: "https://example.com/orcid/first-last-postdoc1" }
-  //   ]
-  // },
   {
-    name: "Postdoctoral Researchers",
-    role: "Open Position",
-    group: "Postdocs",
+    name: "Yinjie Yu",
+    chineseName: "余胤杰",
+    group: "Master's Students",
     bio:
-      "We welcome postdocs with backgrounds in metabolomics/exposomics, bioinformatics, microbiology, AI, or data science.",
-    email: piProfile.email,
-    links: [{ label: "Learn more", href: "/contact" }],
-    isOpenPosition: true
+      "Yinjie received his bachelor's degree from Shandong University. His research interests lie in mass spectrometry informatics, with a focus on mining small-molecule metabolomics data.",
+    email: "26210740098@m.fudan.edu.cn",
+    image: "/images/profiles/Yinjie_Yu.jpg",
+    joinedYear: 2026
   },
   {
-    name: "Master's & PhD Students",
-    role: "Open Position",
-    group: "Graduate Students",
+    name: "Lujie Qu",
+    chineseName: "渠路捷",
+    group: "Master's Students",
     bio:
-      "We welcome graduate students who want to develop computational or experimental approaches for metabolomics and xenobiotic metabolism.",
-    email: piProfile.email,
-    links: [{ label: "Learn more", href: "/contact" }],
-    isOpenPosition: true
-  },
-  {
-    name: "Undergraduate Researchers",
-    role: "Open Position",
-    group: "Undergraduate Students",
-    bio:
-      "We welcome motivated undergraduates who are curious about science, regardless of prior research experience. We are especially interested in students who can commit to sustained, continuous research over multiple semesters.",
-    email: piProfile.email,
-    links: [{ label: "Learn more", href: "/contact" }],
-    isOpenPosition: true
+      "Lujie's research focuses on mass spectrometry and small-molecule metabolism, with particular interest in the connections among the environment, microorganisms, and human metabolism.",
+    email: "ljqu26@m.fudan.edu.cn",
+    image: "/images/profiles/Lujie_Qu.jpg",
+    joinedYear: 2026
   }
 ];

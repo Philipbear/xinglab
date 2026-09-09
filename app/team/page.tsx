@@ -1,11 +1,11 @@
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, CalendarDays, Mail } from "lucide-react";
 import Link from "next/link";
 import { PageIntro } from "@/components/PageIntro";
 import { PersonAvatar } from "@/components/PersonAvatar";
 import { ProfileLinkIcon } from "@/components/ProfileLinkIcon";
 import { members, type Member, type ProfileEntry, type ProfileLink } from "@/lib/content";
 
-const groups = ["Postdocs", "Graduate Students", "Undergraduate Students", "Alumni"] as const;
+const groups = ["Postdocs", "PhD Students", "Master's Students", "Undergraduate Students", "Alumni"] as const;
 
 function MemberContactLinks({
   email,
@@ -75,13 +75,21 @@ function CareerSummary({ entries }: { entries?: ProfileEntry[] }) {
   );
 }
 
-function MemberProfile({ member }: { member: Member }) {
+function MemberProfile({ member, compact = false }: { member: Member; compact?: boolean }) {
   return (
-    <article className="grid gap-7 sm:grid-cols-[8rem_minmax(0,1fr)] sm:gap-8 lg:grid-cols-[8rem_17rem_minmax(0,1fr)]">
+    <article
+      className={`grid gap-7 sm:grid-cols-[8rem_minmax(0,1fr)] sm:gap-8 ${
+        compact ? "" : "lg:grid-cols-[8rem_17rem_minmax(0,1fr)]"
+      }`}
+    >
       <div className="flex justify-center sm:justify-start">
         <PersonAvatar name={member.name} image={member.image} size="xl" />
       </div>
-      <div className="flex min-w-0 flex-col items-center text-center sm:items-start sm:text-left">
+      <div
+        className={`flex min-w-0 flex-col items-center text-center sm:items-start sm:text-left ${
+          member.careerSummary?.length || compact ? "" : "lg:col-span-2"
+        }`}
+      >
         <h3 className="text-2xl font-semibold tracking-normal text-ink">
           {member.name}
           {member.chineseName ? (
@@ -90,7 +98,13 @@ function MemberProfile({ member }: { member: Member }) {
             </span>
           ) : null}
         </h3>
-        <p className="mt-2 text-sm font-medium leading-6 text-muted">{member.role}</p>
+        {member.role ? <p className="mt-2 text-sm font-medium leading-6 text-muted">{member.role}</p> : null}
+        {member.joinedYear ? (
+          <p className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium tracking-wide text-muted">
+            <CalendarDays aria-hidden="true" size={14} className="text-fudan" />
+            Joined {member.joinedYear}
+          </p>
+        ) : null}
         {member.bio ? <p className="mt-4 text-sm leading-7 text-muted">{member.bio}</p> : null}
         <MemberContactLinks
           email={member.email}
@@ -107,17 +121,16 @@ function MemberProfile({ member }: { member: Member }) {
           </Link>
         ) : null}
       </div>
-      <div className="sm:col-span-2 lg:col-span-1">
-        <CareerSummary entries={member.careerSummary} />
-      </div>
+      {member.careerSummary?.length ? (
+        <div className="sm:col-span-2 lg:col-span-1">
+          <CareerSummary entries={member.careerSummary} />
+        </div>
+      ) : null}
     </article>
   );
 }
 
 export default function MembersPage() {
-  const openPositions = members.filter((m) => m.isOpenPosition);
-  const realMembers = members.filter((m) => !m.isOpenPosition);
-
   return (
     <>
       <PageIntro
@@ -128,7 +141,7 @@ export default function MembersPage() {
 
       <section className="mx-auto max-w-7xl px-5 pb-12 pt-8 sm:px-8 lg:pb-16 lg:pt-10">
         <div className="grid gap-12">
-          {realMembers
+          {members
             .filter((member) => member.group === "Principal Investigator")
             .map((member) => (
               <section key={member.name}>
@@ -140,7 +153,8 @@ export default function MembersPage() {
             ))}
 
           {groups.map((group) => {
-            const groupMembers = realMembers.filter((member) => member.group === group);
+            const groupMembers = members.filter((member) => member.group === group);
+            const isStudentGroup = group.endsWith("Students");
 
             if (groupMembers.length === 0) {
               return null;
@@ -149,38 +163,18 @@ export default function MembersPage() {
             return (
               <section key={group}>
                 <h2 className="text-2xl font-semibold tracking-normal text-ink">{group}</h2>
-                <div className="mt-5 grid gap-10">
+                <div className={`mt-5 grid gap-10 ${isStudentGroup ? "lg:grid-cols-2" : ""}`}>
                   {groupMembers.map((member, index) => (
-                    <MemberProfile key={`${member.group}-${member.name}-${index}`} member={member} />
+                    <MemberProfile
+                      key={`${member.group}-${member.name}-${index}`}
+                      member={member}
+                      compact={isStudentGroup}
+                    />
                   ))}
                 </div>
               </section>
             );
           })}
-
-          {openPositions.length > 0 && (
-            <section>
-              <h2 className="text-2xl font-semibold tracking-normal text-ink">Now Recruiting</h2>
-              <p className="mt-2 text-sm leading-7 text-muted">
-                We are actively looking for researchers to join the lab. If our work interests you, reach out — we&apos;d love to talk.
-              </p>
-              <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                {openPositions.map((position, index) => (
-                  <article
-                    key={`open-${index}`}
-                    className="flex flex-col rounded-lg border border-line bg-paper p-6"
-                  >
-                    <p className="text-xs font-semibold uppercase tracking-widest text-fudan">
-                      {position.role}
-                    </p>
-                    <h3 className="mt-2 text-base font-semibold text-ink">{position.name}</h3>
-                    <p className="mt-3 flex-1 text-sm leading-7 text-muted">{position.bio}</p>
-                    <MemberContactLinks links={position.links} />
-                  </article>
-                ))}
-              </div>
-            </section>
-          )}
         </div>
       </section>
     </>

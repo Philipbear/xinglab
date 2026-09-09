@@ -31,11 +31,19 @@ export type ProfileHonor = {
 export type Member = {
   name: string;
   chineseName?: string;
-  role: string;
-  group: "Principal Investigator" | "Postdocs" | "Graduate Students" | "Undergraduate Students" | "Researchers" | "Alumni";
+  role?: string;
+  group:
+    | "Principal Investigator"
+    | "Postdocs"
+    | "PhD Students"
+    | "Master's Students"
+    | "Undergraduate Students"
+    | "Researchers"
+    | "Alumni";
   bio: string;
   email?: string;
   image?: string;
+  joinedYear?: number;
   links?: ProfileLink[];
   careerSummary?: ProfileEntry[];
   profileHref?: string;
