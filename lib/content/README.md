@@ -173,7 +173,7 @@ Add a member object:
   bio: "Short research description.",
   email: "first.last@example.com",
   image: "/images/profiles/person-photo.png",
-  joinedYear: 2026,
+  joinedDate: "September 2026",
   links: [
     { label: "Google Scholar", href: "https://scholar.google.com/" },
     { label: "GitHub", href: "https://github.com/" }
@@ -189,7 +189,7 @@ Allowed `group` values are defined in `types.ts`:
 
 Notes:
 
-- `chineseName`, `role`, `email`, `image`, `joinedYear`, and `links` are optional.
+- `chineseName`, `role`, `email`, `image`, `joinedDate`, and `links` are optional.
 - If no image is provided, the site shows initials.
 - Team profile links are limited to the first 4 links on the team page.
 - The PI card is generated from `profile.ts` and inserted into `team.ts`.

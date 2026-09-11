@@ -43,7 +43,7 @@ export type Member = {
   bio: string;
   email?: string;
   image?: string;
-  joinedYear?: number;
+  joinedDate?: string;
   links?: ProfileLink[];
   careerSummary?: ProfileEntry[];
   profileHref?: string;

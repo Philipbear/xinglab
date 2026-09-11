@@ -43,7 +43,7 @@ export const members: Member[] = [
       "Yinjie received his bachelor's degree from Shandong University. His research interests lie in mass spectrometry informatics, with a focus on mining small-molecule metabolomics data.",
     email: "26210740098@m.fudan.edu.cn",
     image: "/images/profiles/Yinjie_Yu.jpg",
-    joinedYear: 2026
+    joinedDate: "September 2026"
   },
   {
     name: "Lujie Qu",
@@ -53,6 +53,16 @@ export const members: Member[] = [
       "Lujie's research focuses on mass spectrometry and small-molecule metabolism, with particular interest in the connections among the environment, microorganisms, and human metabolism.",
     email: "ljqu26@m.fudan.edu.cn",
     image: "/images/profiles/Lujie_Qu.jpg",
-    joinedYear: 2026
+    joinedDate: "September 2026"
+  },
+  {
+    name: "Ruize Tang",
+    chineseName: "唐瑞泽",
+    group: "Undergraduate Students",
+    bio:
+      "Ruize Tang is a student in the 2025 Elite Program in the Department of Environmental Science and Engineering at Fudan University.",
+    email: "25300740025@m.fudan.edu.cn",
+    image: "/images/profiles/Ruize_Tang.jpg",
+    joinedDate: "September 2026"
   }
 ];

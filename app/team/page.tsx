@@ -99,10 +99,10 @@ function MemberProfile({ member, compact = false }: { member: Member; compact?: 
           ) : null}
         </h3>
         {member.role ? <p className="mt-2 text-sm font-medium leading-6 text-muted">{member.role}</p> : null}
-        {member.joinedYear ? (
+        {member.joinedDate ? (
           <p className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium tracking-wide text-muted">
             <CalendarDays aria-hidden="true" size={14} className="text-fudan" />
-            Joined {member.joinedYear}
+            Joined {member.joinedDate}
           </p>
         ) : null}
         {member.bio ? <p className="mt-4 text-sm leading-7 text-muted">{member.bio}</p> : null}
